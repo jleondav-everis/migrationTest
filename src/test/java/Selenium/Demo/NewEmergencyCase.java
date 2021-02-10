@@ -30,7 +30,7 @@ public class NewEmergencyCase
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
         //To run in Github Action comment this line
-		driver = new ChromeDriver();
+		//driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
 		driver.get("https://test.salesforce.com/");
@@ -46,7 +46,7 @@ public class NewEmergencyCase
 	public void createNewEmergencyCase() throws InterruptedException
 	{
 		UtilitiesLightning.loginSF(driver,"jean.pierre.leon.davila@seat.de.uat","J*-dM=&y5p+5GVQ_1");
-		UtilitiesLightning.launchApp(driver, "Vorgänge");
+		UtilitiesLightning.launchApp(driver, "Vorgï¿½nge");
 		UtilitiesLightning.clickButtonListView(driver,"Neu");
         UtilitiesLightning.setRadioButton(driver,"Notdienst Vorgang");
 		UtilitiesLightning.clickNextButton(driver,"Weiter");
